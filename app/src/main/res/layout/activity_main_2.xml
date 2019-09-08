@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+	<Button
+			android:id="@+id/left_up"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:text="UP"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toTopOf="@+id/left_stop"
+			app:layout_constraintRight_toLeftOf="@+id/right_up"
+			/>
+
+	<Button
+			android:id="@+id/left_stop"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:text="STOP"
+			app:layout_constraintLeft_toLeftOf="@+id/left_up"
+			app:layout_constraintRight_toRightOf="@+id/left_up"
+			app:layout_constraintTop_toBottomOf="@+id/left_up"
+			app:layout_constraintBottom_toTopOf="@+id/left_down"
+			/>
+
+	<Button
+			android:id="@+id/left_down"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:text="DOWN"
+			app:layout_constraintLeft_toLeftOf="@+id/left_up"
+			app:layout_constraintRight_toRightOf="@+id/left_up"
+			app:layout_constraintTop_toBottomOf="@+id/left_stop"
+			app:layout_constraintBottom_toBottomOf="parent"
+			/>
+
+	<Button
+			android:id="@+id/right_up"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:text="UP"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toTopOf="@+id/right_stop"
+			app:layout_constraintLeft_toRightOf="@+id/left_up"
+			/>
+
+	<Button
+			android:id="@+id/right_stop"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:text="STOP"
+			app:layout_constraintLeft_toLeftOf="@+id/right_up"
+			app:layout_constraintRight_toRightOf="@+id/right_up"
+			app:layout_constraintTop_toBottomOf="@+id/right_up"
+			app:layout_constraintBottom_toTopOf="@+id/right_down"
+			/>
+
+	<Button
+			android:id="@+id/right_down"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:text="DOWN"
+			app:layout_constraintLeft_toLeftOf="@+id/right_up"
+			app:layout_constraintRight_toRightOf="@+id/right_up"
+			app:layout_constraintTop_toBottomOf="@+id/right_stop"
+			app:layout_constraintBottom_toBottomOf="parent"
+			/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
