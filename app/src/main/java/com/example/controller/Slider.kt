@@ -34,6 +34,8 @@ class Slider @JvmOverloads constructor(context: Context, attrs: AttributeSet? = 
 	var previousValue = 0
 	var value = 0
 
+	var wasEverTouched = false
+
 	init {
 		thumbPaint.color = Color.BLUE
 		thumbPaint.isAntiAlias = true
@@ -84,9 +86,12 @@ class Slider @JvmOverloads constructor(context: Context, attrs: AttributeSet? = 
 		)
 
 		cx = width / 2F
-		if (!isPressed) {
+		if (!wasEverTouched) {
 			cy = height / 2F
 		}
+//		if (!isPressed) {
+//			cy = height / 2F
+//		}
 		val radius = 80F
 
 		canvas.drawCircle(cx, cy, radius, thumbPaint)
@@ -99,6 +104,7 @@ class Slider @JvmOverloads constructor(context: Context, attrs: AttributeSet? = 
 		when (action) {
 			MotionEvent.ACTION_DOWN -> {
 //				log("Down")
+				wasEverTouched = true
 				isPressed = true
 				cy = event.y
 			}

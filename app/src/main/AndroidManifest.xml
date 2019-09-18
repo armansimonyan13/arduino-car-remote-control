@@ -16,7 +16,7 @@
 			tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-                android:name=".MainActivity2"
+                android:name=".MainActivity"
                 android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
