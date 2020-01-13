@@ -14,7 +14,7 @@ class MainActivity2 : AppCompatActivity() {
 
 		setContentView(R.layout.activity_main_2)
 
-		controller = Controller(BluetoothAdapter.getDefaultAdapter())
+		controller = Controller(BluetoothAdapter.getDefaultAdapter(), Logger())
 
 		val leftUp: Button = findViewById(R.id.left_up)
 		val leftStop: Button = findViewById(R.id.left_stop)
@@ -46,7 +46,7 @@ class MainActivity2 : AppCompatActivity() {
 	}
 
 	override fun onDestroy() {
-		controller.stop();
+//		controller.stop();
 
 		super.onDestroy()
 	}

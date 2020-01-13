@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
 		setContentView(R.layout.activity_main)
 
-		controller = Controller(BluetoothAdapter.getDefaultAdapter());
+		controller = Controller(BluetoothAdapter.getDefaultAdapter(), Logger())
 
 		val sliderLeft: Slider = findViewById(R.id.left)
 		val sliderRight: Slider = findViewById(R.id.right)
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 	}
 
 	override fun onDestroy() {
-		controller.stop()
+//		controller.stop()
 
 		super.onDestroy()
 	}
